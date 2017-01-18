@@ -1,0 +1,28 @@
+<?php require 'views/header.phtml';
+
+    extract($data);
+?>
+    <div class="page-header">
+        <h1>Neuer Vorschlag</h1><br><br>
+    </div>
+    <form action="http://suggestionboxmvc.local/neuerVorschlag/insertNeuerVorschlag" method="post">
+        <fieldset class="form-group">
+            <label for="title">Titel:</label>
+            <input type="text" name="title" class="form-control" placeholder="Titel">
+        </fieldset>
+        <fieldset class
+        "form-group">
+        <label for="description">Beschreibung:</label>
+            <textarea class="form-control" name="description" rows="15"
+                      placeholder="Beschreibe deinen Vorschlag"></textarea>
+        </fieldset><br>
+
+        <div class="input-group input-group-lg pull-sm-right">
+            <span><?php echo $msg; ?> </span>
+            <button type="submit" class="btn btn-primary" name="form_posted">Vorschlag einreichen</button>
+            <br>
+
+        </div>
+    </form>
+    </div>
+<?php require 'views/footer.phtml'; ?>
