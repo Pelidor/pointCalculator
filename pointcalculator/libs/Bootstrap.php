@@ -14,8 +14,8 @@ class Bootstrap
         // print_r($url);
         //if in root go to account page
         if (empty($url[0])) {
-            require 'Controller/ranking.php';
-            $controller = new Ranking();
+            require 'Controller/rankingController.php';
+            $controller = new RankingController();
             $controller->index();
             return false;
         }
