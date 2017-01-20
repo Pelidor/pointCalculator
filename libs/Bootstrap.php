@@ -4,7 +4,6 @@ class Bootstrap
 {
     function __construct()
     {
-        session_start();
 
         $url = isset($_GET['url']) ? $_GET['url'] : null;
         $url = rtrim($url, '/');
