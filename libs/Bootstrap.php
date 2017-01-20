@@ -19,17 +19,17 @@ class Bootstrap
             return false;
         }
 
-        $file = 'controllers/' . $url[0] . '.php';
+        $file = 'Controller/' . $url[0] . 'Controller.php';
         if (file_exists($file)) {
             require $file;
         } else {
-            require 'controllers/error.php';
+            require 'Controller/errorController.php';
             new Error();
             return false;
         }
 
 
-        $controller = new $url[0];
+        /*$controller = new $url[0];
 
         if (isset($url[1])) {
             if (isset($url[2])) {
@@ -41,13 +41,13 @@ class Bootstrap
             $controller->index();
         }
 
-        require 'controllers/account.php';
+        require 'Controller/account.php';
         $controller = new Account();
         if (isset($url[1]) && $url[1] == 'login') {
             $controller->login();
         } else {
             $controller->index();
-        }
+        }*/
         return false;
 
 
