@@ -54,7 +54,7 @@ class Ranking extends Model
 
             }
         }
-
-        var_dump($ranking);
+        arsort($ranking);
+        return $ranking;
     }
 } 

@@ -1,0 +1,21 @@
+<?php require 'view/header.phtml';
+
+$rankingData = $data;
+?>
+    <div class="page-header">
+        <h1>Ranking</h1><br><br>
+    </div>
+    <div class="container">
+        <table class="table">
+            <th>Driver</th>
+            <th>Position</th>
+            <?php foreach ($rankingData as $driver => $points): ?>
+                <tr>
+                    <td><?php echo $driver; ?></td>
+                    <td><?php echo $points; ?></td>
+
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </div>
+<?php require 'view/footer.phtml'; ?>

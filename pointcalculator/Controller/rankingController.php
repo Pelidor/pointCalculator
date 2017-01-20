@@ -1,6 +1,7 @@
 <?php
 
-class RankingController extends Controller {
+class RankingController extends Controller
+{
     function __construct()
     {
         parent::__construct();
@@ -10,9 +11,10 @@ class RankingController extends Controller {
     {
         require 'Model/ranking.php';
         $ranking = new Ranking();
-        $ranking->getRanking();
+        $rankingData = $ranking->getRanking();
 
-        echo "Ranking";
+
+        $this->view->render('ranking/index', $rankingData, 'Ranking');
 
     }
 }

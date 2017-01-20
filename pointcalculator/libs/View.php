@@ -15,6 +15,6 @@ class View
 
     public function render($name, $data = array(), $pagename='Pagename')
     {
-        require 'views/' . $name . '.phtml';
+        require 'view/' . $name . '.phtml';
     }
 }
