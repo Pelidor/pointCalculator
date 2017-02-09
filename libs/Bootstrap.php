@@ -9,7 +9,6 @@ class Bootstrap
         $url = rtrim($url, '/');
         $url = explode('/', $url);
 
-
         // print_r($url);
         //if in root go to account page
         if (empty($url[0])) {
@@ -28,8 +27,8 @@ class Bootstrap
             return false;
         }
 
-
-        /*$controller = new $url[0];
+$controllerClassName = $url[0] . 'Controller';
+        $controller = new $controllerClassName;
 
         if (isset($url[1])) {
             if (isset($url[2])) {
@@ -40,7 +39,7 @@ class Bootstrap
         } else {
             $controller->index();
         }
-
+/*
         require 'Controller/account.php';
         $controller = new Account();
         if (isset($url[1]) && $url[1] == 'login') {
