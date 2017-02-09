@@ -27,7 +27,7 @@ class Bootstrap
             return false;
         }
 
-$controllerClassName = $url[0] . 'Controller';
+        $controllerClassName = $url[0] . 'Controller';
         $controller = new $controllerClassName;
 
         if (isset($url[1])) {
@@ -39,14 +39,14 @@ $controllerClassName = $url[0] . 'Controller';
         } else {
             $controller->index();
         }
-/*
-        require 'Controller/account.php';
-        $controller = new Account();
-        if (isset($url[1]) && $url[1] == 'login') {
-            $controller->login();
-        } else {
-            $controller->index();
-        }*/
+        /*
+                require 'Controller/account.php';
+                $controller = new Account();
+                if (isset($url[1]) && $url[1] == 'login') {
+                    $controller->login();
+                } else {
+                    $controller->index();
+                }*/
         return false;
 
 
